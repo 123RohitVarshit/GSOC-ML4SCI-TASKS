@@ -1,4 +1,4 @@
-# 🔬 Quark-Gluon Jet Tagging with Graph Neural Networks
+# Quark-Gluon Jet Tagging with Graph Neural Networks
 
 > *Can a neural network learn the same physics that took decades for particle physicists to understand?*
 
@@ -6,7 +6,7 @@ This project trains two Graph Neural Networks to classify high-energy particle j
 
 ---
 
-## 📖 What is this project about?
+## What is this project about?
 
 ### The Physics Problem (explained simply)
 
@@ -44,7 +44,7 @@ No single particle tells you the answer. The classifier must learn the **collect
 
 ---
 
-## 🧠 Why Graph Neural Networks?
+## Why Graph Neural Networks?
 
 A jet is a **set of particles** — unordered, variable in size, and existing in continuous space. Standard neural network approaches fail here:
 
@@ -53,13 +53,13 @@ A jet is a **set of particles** — unordered, variable in size, and existing in
 | RNN | Forces artificial sequence — particle order is physically meaningless |
 | CNN | Requires fixed pixel grid — destroys kinematic precision, wastes memory |
 | Plain MLP | Cannot handle variable-length input |
-| **GNN** | ✅ Handles unordered sets natively, variable size, continuous space |
+| **GNN** |  Handles unordered sets natively, variable size, continuous space |
 
 A Graph Neural Network treats each particle as a **node** and connects nearby particles with **edges**, then passes messages between them to learn collective patterns.
 
 ---
 
-## 📐 How a Jet Becomes a Graph
+## How a Jet Becomes a Graph
 
 Each jet is converted from a raw list of particles into a graph through these steps:
 
@@ -99,7 +99,7 @@ Raw particle list          →        Graph
 
 ---
 
-## 🏗️ The Two Architectures
+## The Two Architectures
 
 ### Architecture 1 — ParticleNet (Dynamic EdgeConv)
 
@@ -180,7 +180,7 @@ new_features_i = Σ α_ij × features_j   for all neighbours j
 
 ---
 
-## 📊 Results
+## Results
 
 ### Dataset
 - **Source**: Zenodo record 3164691 — Pythia8 Q/G jets
@@ -234,7 +234,7 @@ ParticleNet has higher accuracy at fixed threshold on Herwig (0.7109 vs 0.6864) 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 jet-gnn-quark-gluon/
@@ -264,7 +264,7 @@ jet-gnn-quark-gluon/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Option A — Google Colab (Recommended)
 Open `notebooks/JetGNN_Colab.ipynb` in Google Colab with a T4 GPU runtime.
@@ -318,7 +318,7 @@ print(f'JetGAT AUC: {test_auc:.4f}')
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 | Property | Value |
 |---|---|
@@ -336,7 +336,7 @@ Each of the 20 files is an independent Pythia8 run with slightly different pT an
 
 ---
 
-## 🔧 Technical Details
+## Technical Details
 
 | Component | Choice | Reason |
 |---|---|---|
@@ -351,7 +351,7 @@ Each of the 20 files is an independent Pythia8 run with slightly different pT an
 
 ---
 
-## 📚 References
+##  References
 
 1. **ParticleNet**: Qu & Gouskos — *ParticleNet: Jet Tagging via Particle Clouds*  
    Phys. Rev. D 101, 056019 (2020). [arXiv:1902.08570](https://arxiv.org/abs/1902.08570)
@@ -367,7 +367,7 @@ Each of the 20 files is an independent Pythia8 run with slightly different pT an
 
 ---
 
-## 👤 Author
+## Author
 
 **Rohit** — B.E. Artificial Intelligence & Machine Learning  
 SIES Graduate School of Technology, Navi Mumbai  
