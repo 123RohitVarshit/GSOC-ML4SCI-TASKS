@@ -251,27 +251,18 @@ jet-gnn-quark-gluon/
 ├── trainer.py                   ← Training loop with checkpointing
 │
 ├── results/
-│   ├── roc_curves.png           ← ROC comparison
-│   ├── training_curves.png      ← Loss/AUC/Acc over epochs
-│   ├── confusion_matrices.png   ← Where models make mistakes
-│   ├── score_distributions.png  ← Quark/gluon score separation
-│   ├── cross_generator.png      ← Pythia vs Herwig robustness
-│   └── graph_construction.png   ← Point-cloud to graph visualisation
-│
-└── notebooks/
-    └── JetGNN_Colab.ipynb       ← Complete runnable notebook
+   ├── roc_curves.png           ← ROC comparison
+   ├── training_curves.png      ← Loss/AUC/Acc over epochs
+   ├── confusion_matrices.png   ← Where models make mistakes
+   ├── score_distributions.png  ← Quark/gluon score separation
+   ├── cross_generator.png      ← Pythia vs Herwig robustness
+   └── graph_construction.png   ← Point-cloud to graph visualisation
+
 ```
 
 ---
 
 ## How to Run
-
-### Option A — Google Colab (Recommended)
-Open `notebooks/JetGNN_Colab.ipynb` in Google Colab with a T4 GPU runtime.
-The notebook handles everything automatically including dataset download,
-graph construction, training, and evaluation.
-
-### Option B — Local
 
 **1. Install dependencies**
 ```bash
